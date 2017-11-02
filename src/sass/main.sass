@@ -1,0 +1,143 @@
+@import "~bulma"
+@import "./themify-icons.css"
+
+
+html
+  @media screen and (max-width: 1028px)
+    font-size: 14px
+
+.hero
+  text-align: center
+  min-height: 100vh
+  .hero-body
+    align-items: center
+    display: flex
+    max-width: 900px
+    margin: auto
+
+.title
+  font-weight: 300
+
+.subtitle
+  font-weight: 300
+  line-height: 2.2rem
+
+.navigation
+  position: fixed
+  left: 3%
+  height: 100%
+  padding: 10px
+  box-sizing: border-box
+
+  @media screen and (max-width: 1028px)
+    display: none
+    width: 100%
+    left: 0px
+    bottom: 0px
+    height: auto
+
+  &.is-dark &-item-link
+    color: rgba(0,0,0,.8)
+  //   color: #333333
+    &.is-active .icon
+      background: rgba(0,0,0,.2)
+
+  &.is-dark &-item-link .icon
+    border-color: rgba(0,0,0,.5)
+    &:hover
+      color: rgba(0,0,0,.5)
+  //   color: #333333
+  //   &:hover
+  //     // color: #333333
+
+  &-items
+    height: 100%
+    display: flex
+    align-items: center
+    align-content: center
+    justify-content: space-evenly
+    flex-wrap: wrap
+    width: 60px
+
+    @media screen and (max-width: 1028px)
+      // position: static
+      height: auto
+      width: 100%
+
+
+  &-item
+    padding: 15px 0
+    box-sizing: border-box
+
+    &-link
+      display: block
+      color: $white
+      text-align: center
+      transition: all .15s
+
+      &:hover
+        color: $white
+        padding-left: 20px
+
+      &.is-active 
+        font-weight: 500
+        .icon
+          background-color: rgba(0,0,0,.2)
+          border: 2px $white solid 
+
+      .icon
+        border: 1px $white solid
+        border-radius: 50%
+        padding: 20px
+        
+        &:hover
+          color: $white
+          
+    &-title
+      margin: 4px 0
+
+      
+
+.portfolio
+
+  .columns
+    flex-wrap: wrap
+
+  &-item
+  
+    &-image
+      border: 1px #ccc solid
+      border-radius: 6px
+      overflow: hidden
+      img
+        width: 100%
+        display: block; 
+
+.skills
+
+  .skill-item
+    @media screen and (max-width: 768px)
+      margin-bottom: 50px
+      max-width: 250px
+      &.first
+        margin-top: 30px
+      &.last
+        margin-bottom: 30px
+
+    &-title
+      font-weight: 400
+
+    &-icon
+      color: $white
+      background: #7E57C2
+      margin: 0 auto 30px auto
+      width: 140px
+      height: 140px
+      border-radius: 50%
+      font-size: 3.6rem
+      display: flex
+      align-items: center
+      justify-content: center
+      
+    &-description
+      font-weight: 300
